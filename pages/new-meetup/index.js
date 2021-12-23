@@ -1,7 +1,14 @@
+import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 // our-domain.com/new-meetup
 
-function Home () {
-  return <h1>Hey</h1>
+function NewMeetupPage () {
+  function addMeetupHandler (enteredMeetupData) {
+    console.log(enteredMeetupData)
+  };
+  
+  return (
+    <NewMeetupForm onAddMeetup={addMeetupHandler}/>
+  )
 }
 
-export default Home;
+export default NewMeetupPage;

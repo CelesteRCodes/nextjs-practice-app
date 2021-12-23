@@ -1,5 +1,13 @@
-function Home () {
-  return <h1>Hey</h1>
-}
+// import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 
-export default Home;
+// function NewMeetupPage () {
+//   function addMeetupHandler (enteredMeetupData) {
+//     console.log(enteredMeetupData)
+//   };
+
+//   return (
+//     <NewMeetupForm onAddMeetup={addMeetupHandler}/>
+//   )
+// }
+
+// export default NewMeetupPage;
