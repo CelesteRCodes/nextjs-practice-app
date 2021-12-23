@@ -20,3 +20,10 @@ Page Pre-Rendering:
       - any code inside function is only executed during build process, 
         never client side
 
+      - cons of getStaticProps() : 
+          - data could be outdated without client side data fetching
+            - use revalidate prop: unlocks incremental static generation,
+              time it'll wait before it regenerates page for incoming request
+              - revalidate: 10, page would regenerate every 10 sec as long 
+                as there's new data added
+
