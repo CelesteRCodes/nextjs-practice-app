@@ -1,13 +1,14 @@
-// import NewMeetupForm from "../../components/meetups/NewMeetupForm";
+import MeetupDetails from "../../components/meetups/MeetupDetails";
 
-// function NewMeetupPage () {
-//   function addMeetupHandler (enteredMeetupData) {
-//     console.log(enteredMeetupData)
-//   };
+function MeetupDetails() {
+  return (
+    <MeetupDetails
+      image="https://unsplash.com/photos/nUkxLPE5Fto"
+      title="1st meetup"
+      address="NOLA"
+      description="first vacay"
+    />
+  );
+}
 
-//   return (
-//     <NewMeetupForm onAddMeetup={addMeetupHandler}/>
-//   )
-// }
-
-// export default NewMeetupPage;
+export default MeetupDetails;
