@@ -1,8 +1,8 @@
-import MeetupDetails from "../../components/meetups/MeetupDetails";
+import MeetupDetail from "../../components/meetups/MeetupDetail";
 
 function MeetupDetails() {
   return (
-    <MeetupDetails
+    <MeetupDetail
       image="https://unsplash.com/photos/nUkxLPE5Fto"
       title="1st meetup"
       address="NOLA"
