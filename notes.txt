@@ -1,0 +1,22 @@
+NextJS is a framework (fullstack)
+
+Page Pre-Rendering: 
+  - w/ next js the first page is pre-rendered
+    good for search engine but may not always be, could
+    be missing info
+    
+  - once rendered, React takes over and hydrates code
+    (refreshes, fully active/interactive, new data fetched)
+
+  - 2 forms of pre-rendering (render first with data = pre-render):
+  static generation and server side rendering
+    - NextJS defaults static generation
+     - getStaticProps() NextJs calls this first before component function 
+      (searches for this function first)
+      - function prepares props for this page, can only use on pages
+      - can be asynchronous (waits for data to be loaded, waits for promise)
+      - allows you to load data before component is rendered, so it
+        can be rendered with the required data
+      - any code inside function is only executed during build process, 
+        never client side
+
