@@ -19,6 +19,10 @@ Page Pre-Rendering:
         can be rendered with the required data
       - any code inside function is only executed during build process, 
         never client side
+      - best if you don't have data that changes multi times per sec, and 
+        and don't need access to request object (authentication) 
+          - pregenerates html file that can be stored and served by CDN 
+            (cache and reused) which is faster than having to fetch data and reload
 
       - cons of getStaticProps() : 
           - data could be outdated without client side data fetching
@@ -26,4 +30,12 @@ Page Pre-Rendering:
               time it'll wait before it regenerates page for incoming request
               - revalidate: 10, page would regenerate every 10 sec as long 
                 as there's new data added
+
+      - alternative to getStaticProps is getServerSideProps()
+        - regenerates with incoming data
+        - receives context from the request with data (header, body)
+
+        - cons: 
+          - have to wait for page to be generate on ever incoming request
+
 
