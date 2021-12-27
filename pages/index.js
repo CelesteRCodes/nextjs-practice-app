@@ -22,27 +22,27 @@ function Home(props) {
   return <MeetupList meetups={props.meetups} />;
 }
 
-// export function getStaticProps() {
-//   // fetch data from an API, read data from file system
-//   return {
-//     props: {
-//       meetups: DUMMY_MEETUPS,
-//     },
-//     revalidate: 10
-//   };
-// };
-
-export async function getServerSideProps(context) {
-  // fetch data
-  // this is server side code only
-  const req = context.req;
-  const res = context.res;
-  
+export function getStaticProps() {
+  // fetch data from an API, read data from file system
   return {
     props: {
       meetups: DUMMY_MEETUPS,
     },
+    revalidate: 10
   };
-}
+};
+
+// export async function getServerSideProps(context) {
+//   // fetch data
+//   // this is server side code only
+//   const req = context.req;
+//   const res = context.res;
+
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS,
+//     },
+//   };
+// }
 
 export default Home;

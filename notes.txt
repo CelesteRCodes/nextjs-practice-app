@@ -31,11 +31,20 @@ Page Pre-Rendering:
               - revalidate: 10, page would regenerate every 10 sec as long 
                 as there's new data added
 
+      - getStaticPaths() returns object that describes all the dynamic segment values,
+        all the meetupIds that should be pregenerated 
+        - paths array should generated dynamically
+        - fallback = false is strict, has to enter what's supported or receive a 404
+        - fallback = true, NextJS will try to generate a pg for this ID dynamically 
+          on the server for the incoming request
+
       - alternative to getStaticProps is getServerSideProps()
         - regenerates with incoming data
         - receives context from the request with data (header, body)
 
         - cons: 
           - have to wait for page to be generate on ever incoming request
+
+     
 
 
